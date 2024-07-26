@@ -100,29 +100,3 @@ int main(void) {
 
     return 0;
 }
-
-// int main(void) {
-//     size_t i = 0;
-//     unsigned char data[] = {0xAB, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-
-//     maghreb_transition_t initial_transitions[] = {nxmc2_initial,
-//                                                   pokecon_initial};
-//     maghreb_transition_t transition = maghreb_initial;
-//     maghreb_deserializer_t deserializer = NULL;
-
-//     maghreb_register_initial_transitions(initial_transitions,
-//                                          sizeof(initial_transitions) /
-//                                              sizeof(maghreb_transition_t));
-
-//     for (i = 0; i < sizeof(data); i++) {
-//         if ((transition = transition(data[i], &deserializer)) ==
-//             maghreb_accepted) {
-//             printf("accepted: %d/%d\n", i, sizeof(data));
-//             deserializer(NULL, 0, NULL);
-
-//             break;
-//         }
-//     }
-
-//     return 0;
-// }
